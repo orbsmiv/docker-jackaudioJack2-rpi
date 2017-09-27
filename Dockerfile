@@ -33,14 +33,6 @@ RUN apt-get update && \
         && ldconfig \
         && cd / \
         && apt-get purge \
-          libicu-dev \
-          libasound2-dev \
-          libsamplerate0-dev \
-          libsndfile1-dev \
-          libreadline-dev \
-          libxt-dev \
-          libudev-dev \
-          libavahi-client-dev \
           git \
           gcc-4.8 \
           g++-4.8 \
