@@ -47,6 +47,6 @@ RUN echo "@audio - memlock 256000" >> /etc/security/limits.conf \
 
 
 ENTRYPOINT ["/usr/local/bin/jackd"]
-CMD ["-P75", "-dalsa", "-dhw:1", "-p1024", "-n3", "-s", "-r44100"]
+CMD ["-r", "-d alsa", "-p 1024", "-n 3", "-s", "-r 48000"]
 
 RUN [ "cross-build-end" ]
