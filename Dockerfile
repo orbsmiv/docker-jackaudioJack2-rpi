@@ -1,4 +1,4 @@
-FROM resin/raspberry-pi-debian:stretch
+FROM resin/raspberrypi3-python:2.7-slim
 MAINTAINER orbsmiv@hotmail.com
 
 RUN [ "cross-build-start" ]
