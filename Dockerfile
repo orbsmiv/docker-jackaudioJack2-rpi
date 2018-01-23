@@ -22,10 +22,10 @@ RUN apt-get update && \
           g++-4.8 && \
         apt-get clean && \
         rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
-        
+
 RUN mkdir /tmp/jackd-compile \
         && git clone --depth 1 git://github.com/jackaudio/jack2 /tmp/jackd-compile
-        
+
 RUN cd /tmp/jackd-compile \
         && export CC=/usr/bin/gcc-4.8 \
         && export CXX=/usr/bin/g++-4.8 \
@@ -49,6 +49,6 @@ RUN echo "@audio - memlock 256000" >> /etc/security/limits.conf \
 
 
 # ENTRYPOINT ["/usr/local/bin/jackd"]
-CMD ["/usr/local/bin/jackd", "-r", "-d", "alsa", "-p", "1024", "-n", "3", "-s", "-r", "48000"]
+CMD ["/usr/local/bin/jackd", "-r", "-v", "-d", "alsa", "-d", "hw:0", "-p", "1024", "-n", "3", "-s", "-r", "48000", "-P"]
 
 RUN [ "cross-build-end" ]
