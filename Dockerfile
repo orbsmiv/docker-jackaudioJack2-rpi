@@ -39,10 +39,10 @@ RUN ldconfig
 
 RUN [ "cross-build-end" ]
 
-# FROM resin/armv7hf-debian:jessie
-FROM arm32v7/debian:stretch-slim
+FROM resin/armv7hf-debian:jessie
+# FROM arm32v7/debian:stretch-slim
 
-# RUN [ "cross-build-start" ]
+RUN [ "cross-build-start" ]
 
 ARG DEBIAN_FRONTEND=noninteractive
 
@@ -76,4 +76,4 @@ CMD ["/usr/local/bin/jackd", "-m", "-r", "-p", "32", "-T", "-v", "-d", "alsa", "
 
 # CMD ["/usr/local/bin/jackd", "-r", "-v", "-d", "alsa", "-d", "hw:0", "-p", "1024", "-n", "3", "-s", "-r", "48000", "-P"]
 
-# RUN [ "cross-build-end" ]
+RUN [ "cross-build-end" ]
