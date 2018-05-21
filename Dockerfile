@@ -19,9 +19,7 @@ RUN apt-get update && \
           libavahi-client-dev \
           git \
           gcc-4.8 \
-          g++-4.8 && \
-        apt-get clean && \
-        rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+          g++-4.8
 
 RUN mkdir /tmp/jackd-compile \
         && git clone --depth 1 git://github.com/jackaudio/jack2 /tmp/jackd-compile
