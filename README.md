@@ -1,1 +1,1 @@
-### Experimental SuperCollider Docker build for Raspberry Pi
+### Jack2, compiled for Raspberry Pi
