@@ -39,7 +39,7 @@ RUN ldconfig
 
 RUN [ "cross-build-end" ]
 
-FROM resin/armv7hf-debian:jessie
+FROM resin/armv7hf-debian:stretch
 # FROM arm32v7/debian:stretch-slim
 
 RUN [ "cross-build-start" ]
